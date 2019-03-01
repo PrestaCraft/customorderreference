@@ -291,8 +291,11 @@ class CustomOrderReference extends Module
 
         // Incrementing number
         if ($type == 4) {
-            $existing = Db::getInstance()->getValue('SELECT max(reference) FROM '._DB_PREFIX_.'orders 
-            WHERE reference REGEXP "^[0-9]+"');
+            $existing = Db::getInstance()->getValue(
+                'SELECT MAX(CAST(reference AS UNSIGNED INTEGER)) as reference 
+                FROM '._DB_PREFIX_.'orders 
+                WHERE reference REGEXP "^[0-9]+"'
+            );
 
             if ($existing && $existing > 0) {
                 $return = $existing+1;
