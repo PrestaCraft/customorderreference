@@ -22,7 +22,7 @@ class CustomOrderReference extends Module
     {
         $this->name = 'customorderreference';
         $this->tab = 'others';
-        $this->version = '1.2.0';
+        $this->version = '1.2.1';
         $this->author = 'PrestaCraft';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
@@ -146,11 +146,13 @@ class CustomOrderReference extends Module
                         'values'    => array(
                             array(
                                 'value' => 0,
+                                'id' => "PC_ORDER_REF_0",
                                 'label' => '<strong>'.$this->l('Default PrestaShop').'</strong>
                                 <br />'.$this->l('exmple result').': HGAPWFIMJ'
                             ),
                             array(
                                 'value' => 5,
+                                'id' => "PC_ORDER_REF_5",
                                 'label' => '<strong>'.$this->l('Number'). Configuration::get('PC_ORDER_REF_SEPARATOR').
                                     $this->l('Day'). Configuration::get('PC_ORDER_REF_SEPARATOR')  .$this->l('Month').
                                     Configuration::get('PC_ORDER_REF_SEPARATOR').$this->l('Year').' ['.
@@ -161,6 +163,7 @@ class CustomOrderReference extends Module
                             ),
                             array(
                                 'value' => 1,
+                                'id' => "PC_ORDER_REF_1",
                                 'label' => '<strong>'.$this->l('Number'). Configuration::get('PC_ORDER_REF_SEPARATOR').
                                     $this->l('Month').Configuration::get('PC_ORDER_REF_SEPARATOR').$this->l('Year').
                                     ' ['.
@@ -170,17 +173,20 @@ class CustomOrderReference extends Module
                             ),
                             array(
                                 'value' => 2,
+                                'id' => "PC_ORDER_REF_2",
                                 'label' => '<strong>'.$this->l('Number'). Configuration::get('PC_ORDER_REF_SEPARATOR').
                                     $this->l('Year').' ['.$this->l('Incrementing number within a year').']</strong> *
                                     <br />'.$this->l('exmple result').': 492'.
                                     Configuration::get('PC_ORDER_REF_SEPARATOR') .'2016'
                             ),
                             array(
+                                'id' => "PC_ORDER_REF_3",
                                 'value' => 3,
                                 'label' => '<strong>'.$this->l('Random number').'</strong><br />'.
                                     $this->l('exmple result').': 1422'
                             ),
                             array(
+                                'id' => "PC_ORDER_REF_4",
                                 'value' => 4,
                                 'label' => '<strong>'.$this->l('Incrementing number').'</strong><br />'.
                                     $this->l('exmple result').': 30'

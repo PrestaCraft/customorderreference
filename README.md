@@ -1,6 +1,6 @@
 # Custom order reference (customorderreference)
 
-### Current version: 1.2.0
+### Current version: 1.2.1
 
 | PS compatibility       | Tested?            |    Ok?                |
 | ---------------------- |:------------------:| ---------------------:|
